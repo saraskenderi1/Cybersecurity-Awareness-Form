@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Cybersecurity Quiz</title> 
+    <link rel="icon" href="logo.jpg" type="image/jpg"> 
+    <link rel="stylesheet" href="style.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+      <!-- Start Page -->
+    <div id="start-page" class="page"> 
+        <div class="container"> <!-- A container to center the content -->
+            <h1>Cybersecurity Awareness in Albania</h1> 
+            <p>This study aims to assess the level of cybersecurity awareness among individuals in Albania. Your personal information and responses will remain confidential.By participating, you are contributing to enhancing online safety nationwide . </p>
+            <button class="btn-primary" onclick="goToSignIn()">Start Quiz</button>
+        </div>
+    </div>
+
+<!-- Sign-In Modal -->
+<div id="sign-in-modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeSignInModal()">&times;</span>
+    <h2>Sign In</h2>
+
+    <div class="form-group">
+      <label for="player-name">Name</label>
+      <input type="text" id="player-name" placeholder="Enter your name">
+    </div>
+
+    <div class="form-group">
+      <label for="player-email">Email</label>
+      <input type="email" id="player-email" placeholder="Enter your email">
+    </div>
+
+    <button onclick="startQuiz()">Proceed</button>
+  </div>
+</div>
+
+
+ <!-- Form Page -->
+  <div id="quiz-page" class="page" style="display:none;">
+    <div class="container">
+      <h2 id="question"></h2>
+      <form id="options" class="options"></form>
+      <button id="next" class="btn-primary" onclick="nextQuestion()">Next</button>
+      <button id="submit" onclick="submitQuiz()" style="display:none;">Submit</button>
+      
+      <!-- ✅ Submit Message  -->
+      <div id="submit-message-container" style="display:none;">
+        <p id="submit-message"></p>
+      </div>
+    </div>
+  </div>
+
+
+    <footer class="footer">Stay secure. Stay informed!</footer> 
+    <script src="script.js"></script> 
+</body>
+</html>
